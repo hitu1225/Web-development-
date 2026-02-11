@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Development Documentation Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>📚 Documentation</h2>
+            <button class="sidebar-close" id="sidebarClose">&times;</button>
+        </div>
+        
+        <!-- Search Functionality -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search topics..." class="search-input">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <ul id="navList">
+                <li><a href="#introduction" class="nav-link active">Introduction</a></li>
+                <li><a href="#frontend" class="nav-link">Frontend Development</a></li>
+                <li><a href="#backend" class="nav-link">Backend Development</a></li>
+                <li><a href="#fullstack" class="nav-link">Full Stack Architecture</a></li>
+                <li><a href="#devops" class="nav-link">DevOps & Deployment</a></li>
+                <li><a href="#security" class="nav-link">Security & Auth</a></li>
+                <li><a href="#performance" class="nav-link">Performance Optimization</a></li>
+                <li><a href="#advanced" class="nav-link">Advanced Topics</a></li>
+                <li><a href="#project-structure" class="nav-link">Project Structure</a></li>
+                <li><a href="#interview" class="nav-link">Interview Prep</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Progress Tracker -->
+        <div class="progress-tracker">
+            <h3>Your Progress</h3>
+            <div class="progress-stats">
+                <span id="completedSections">0</span> / <span id="totalSections">10</span> completed
+            </div>
+            <div class="progress-percentage" id="progressPercentage">0%</div>
+        </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <span class="hamburger"></span>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Advanced Web Development Documentation</h1>
+                <p class="hero-subtitle">Your comprehensive guide to modern web development - from fundamentals to advanced architecture</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Sections</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Topics</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Code Examples</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📖 Introduction to Web Development</h2>
+                <p class="section-subtitle">Understanding the foundations of the web</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card">
+                    <h3>What is Web Development?</h3>
+                    <p>Web development is the process of building and maintaining websites and web applications. It encompasses everything from creating simple static pages to complex, dynamic web applications.</p>
+                    <ul class="feature-list">
+                        <li><strong>Frontend:</strong> What users see and interact with (UI/UX)</li>
+                        <li><strong>Backend:</strong> Server-side logic, databases, and APIs</li>
+                        <li><strong>Full Stack:</strong> Combination of both frontend and backend</li>
+                        <li><strong>DevOps:</strong> Deployment, monitoring, and infrastructure</li>
+                    </ul>
+                </div>
+
+                <div class="card glass-card">
+                    <h3>The Web Stack Ecosystem</h3>
+                    <div class="diagram-container">
+                        <div class="stack-diagram">
+                            <div class="stack-layer layer-1">
+                                <span>Frontend Layer</span>
+                                <small>HTML, CSS, JavaScript, React, Vue</small>
+                            </div>
+                            <div class="arrow-down">↓</div>
+                            <div class="stack-layer layer-2">
+                                <span>API Layer</span>
+                                <small>REST, GraphQL, WebSocket</small>
+                            </div>
+                            <div class="arrow-down">↓</div>
+                            <div class="stack-layer layer-3">
+                                <span>Backend Layer</span>
+                                <small>Node.js, Python, Java, Go</small>
+                            </div>
+                            <div class="arrow-down">↓</div>
+                            <div class="stack-layer layer-4">
+                                <span>Database Layer</span>
+                                <small>PostgreSQL, MongoDB, Redis</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Development Roadmap 2024</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <ol class="roadmap-list">
+                            <li><strong>Fundamentals:</strong> HTML5, CSS3, JavaScript ES6+</li>
+                            <li><strong>Version Control:</strong> Git and GitHub workflow</li>
+                            <li><strong>Frontend Framework:</strong> React, Vue, or Angular</li>
+                            <li><strong>State Management:</strong> Redux, Zustand, Pinia</li>
+                            <li><strong>Backend Technology:</strong> Node.js/Express or Python/Django</li>
+                            <li><strong>Databases:</strong> SQL (PostgreSQL) and NoSQL (MongoDB)</li>
+                            <li><strong>APIs:</strong> REST and GraphQL</li>
+                            <li><strong>Authentication:</strong> JWT, OAuth 2.0</li>
+                            <li><strong>Testing:</strong> Jest, Cypress, Playwright</li>
+                            <li><strong>DevOps:</strong> Docker, CI/CD, Cloud platforms</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontend Development Section -->
+        <section id="frontend" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎨 Frontend Development</h2>
+                <p class="section-subtitle">Building beautiful and interactive user interfaces</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- HTML Deep Dive -->
+                <div class="card glass-card">
+                    <h3>HTML5 - Structure & Semantics</h3>
+                    <p>HTML (HyperText Markup Language) provides the structural foundation of web pages.</p>
+                    
+                    <div class="diagram-container">
+                        <h4>DOM Tree Structure</h4>
+                        <div class="dom-tree">
+                            <div class="dom-node root">
+                                <span class="node-label">document</span>
+                                <div class="dom-children">
+                                    <div class="dom-node">
+                                        <span class="node-label">html</span>
+                                        <div class="dom-children">
+                                            <div class="dom-node">
+                                                <span class="node-label">head</span>
+                                                <div class="dom-children">
+                                                    <div class="dom-node"><span class="node-label">title</span></div>
+                                                    <div class="dom-node"><span class="node-label">meta</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="dom-node">
+                                                <span class="node-label">body</span>
+                                                <div class="dom-children">
+                                                    <div class="dom-node"><span class="node-label">header</span></div>
+                                                    <div class="dom-node"><span class="node-label">main</span></div>
+                                                    <div class="dom-node"><span class="node-label">footer</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Semantic HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;Navigation&lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;article&gt;Content&lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- CSS Deep Dive -->
+                <div class="card glass-card">
+                    <h3>CSS3 - Styling & Layout</h3>
+                    <p>CSS (Cascading Style Sheets) controls the visual presentation and layout.</p>
+                    
+                    <div class="diagram-container">
+                        <h4>CSS Box Model</h4>
+                        <div class="box-model">
+                            <div class="box-margin">
+                                <span class="box-label">Margin</span>
+                                <div class="box-border">
+                                    <span class="box-label">Border</span>
+                                    <div class="box-padding">
+                                        <span class="box-label">Padding</span>
+                                        <div class="box-content">
+                                            <span class="box-label">Content</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagram-container">
+                        <h4>Flexbox Layout</h4>
+                        <div class="flexbox-demo">
+                            <div class="flex-container">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                            <p class="diagram-label">display: flex; justify-content: space-between;</p>
+                        </div>
+                    </div>
+
+                    <div class="diagram-container">
+                        <h4>CSS Grid Layout</h4>
+                        <div class="grid-demo">
+                            <div class="grid-container">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                            </div>
+                            <p class="diagram-label">display: grid; grid-template-columns: repeat(2, 1fr);</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Deep Dive -->
+                <div class="card glass-card">
+                    <h3>JavaScript - Logic & Interactivity</h3>
+                    <p>JavaScript brings websites to life with dynamic behavior and interactivity.</p>
+                    
+                    <div class="diagram-container">
+                        <h4>JavaScript Event Loop</h4>
+                        <div class="event-loop-diagram">
+                            <div class="event-loop-component">
+                                <div class="component-box call-stack">Call Stack</div>
+                                <div class="arrow-right">→</div>
+                            </div>
+                            <div class="event-loop-component">
+                                <div class="component-box web-apis">Web APIs</div>
+                                <div class="arrow-down">↓</div>
+                            </div>
+                            <div class="event-loop-component">
+                                <div class="component-box callback-queue">Callback Queue</div>
+                                <div class="arrow-left">←</div>
+                            </div>
+                            <div class="event-loop-label">Event Loop continuously checks and moves callbacks to Call Stack</div>
+                        </div>
+                    </div>
+
+                    <div class="diagram-container">
+                        <h4>Async/Await Flow</h4>
+                        <div class="async-flow">
+                            <div class="flow-step step-1">
+                                <span>1. Function Called</span>
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step step-2">
+                                <span>2. Await Promise</span>
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step step-3">
+                                <span>3. Promise Resolves</span>
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step step-4">
+                                <span>4. Continue Execution</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+                        <pre><code>// Async/Await Example
+async function fetchData() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Frontend Frameworks -->
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Modern Frontend Frameworks</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="framework-comparison">
+                            <div class="framework-item">
+                                <h4>⚛️ React</h4>
+                                <ul>
+                                    <li>Component-based architecture</li>
+                                    <li>Virtual DOM for performance</li>
+                                    <li>One-way data binding</li>
+                                    <li>Rich ecosystem (Next.js, Remix)</li>
+                                    <li>JSX syntax</li>
+                                </ul>
+                                <div class="code-example">
+                                    <pre><code>function App() {
+    const [count, setCount] = useState(0);
+    return (
+        &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+            Count: {count}
+        &lt;/button&gt;
+    );
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="framework-item">
+                                <h4>💚 Vue.js</h4>
+                                <ul>
+                                    <li>Progressive framework</li>
+                                    <li>Template-based syntax</li>
+                                    <li>Two-way data binding</li>
+                                    <li>Composition API</li>
+                                    <li>Easy learning curve</li>
+                                </ul>
+                                <div class="code-example">
+                                    <pre><code>&lt;template&gt;
+    &lt;button @click="count++"&gt;
+        Count: {{ count }}
+    &lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue';
+const count = ref(0);
+&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="framework-item">
+                                <h4>🅰️ Angular</h4>
+                                <ul>
+                                    <li>Full-featured framework</li>
+                                    <li>TypeScript by default</li>
+                                    <li>Dependency injection</li>
+                                    <li>RxJS for reactive programming</li>
+                                    <li>Enterprise-grade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Tools -->
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Build Tools & Bundlers</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="build-tools">
+                            <div class="tool-item">
+                                <h4>📦 Webpack</h4>
+                                <p>Powerful module bundler with extensive plugin ecosystem</p>
+                                <ul>
+                                    <li>Code splitting and lazy loading</li>
+                                    <li>Hot Module Replacement (HMR)</li>
+                                    <li>Tree shaking for optimization</li>
+                                    <li>Loader system for asset processing</li>
+                                </ul>
+                            </div>
+
+                            <div class="tool-item">
+                                <h4>⚡ Vite</h4>
+                                <p>Next-generation frontend tooling - blazing fast</p>
+                                <ul>
+                                    <li>Lightning-fast cold start</li>
+                                    <li>Instant HMR</li>
+                                    <li>Optimized build with Rollup</li>
+                                    <li>Out-of-box TypeScript support</li>
+                                </ul>
+                            </div>
+
+                            <div class="tool-item">
+                                <h4>📦 Parcel</h4>
+                                <p>Zero-configuration bundler</p>
+                                <ul>
+                                    <li>Automatic asset optimization</li>
+                                    <li>Built-in dev server</li>
+                                    <li>Fast bundle times</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend Development Section -->
+        <section id="backend" class="section">
+            <div class="section-header">
+                <h2 class="section-title">⚙️ Backend Development</h2>
+                <p class="section-subtitle">Server-side architecture and data management</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Server Architecture -->
+                <div class="card glass-card">
+                    <h3>Server Architecture</h3>
+                    <div class="diagram-container">
+                        <div class="server-architecture">
+                            <div class="arch-layer">
+                                <div class="arch-box client">Client</div>
+                            </div>
+                            <div class="arch-arrow">↓ HTTP Request</div>
+                            <div class="arch-layer">
+                                <div class="arch-box load-balancer">Load Balancer</div>
+                            </div>
+                            <div class="arch-arrow">↓ Distribute Traffic</div>
+                            <div class="arch-layer">
+                                <div class="arch-box server">App Server 1</div>
+                                <div class="arch-box server">App Server 2</div>
+                                <div class="arch-box server">App Server 3</div>
+                            </div>
+                            <div class="arch-arrow">↓ Query Data</div>
+                            <div class="arch-layer">
+                                <div class="arch-box database">Database</div>
+                                <div class="arch-box cache">Cache (Redis)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REST API Lifecycle -->
+                <div class="card glass-card">
+                    <h3>REST API Request Lifecycle</h3>
+                    <div class="diagram-container">
+                        <div class="api-lifecycle">
+                            <div class="lifecycle-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <strong>Client Request</strong>
+                                    <small>GET /api/users/123</small>
+                                </div>
+                            </div>
+                            <div class="lifecycle-arrow">↓</div>
+                            <div class="lifecycle-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <strong>Middleware</strong>
+                                    <small>Auth, Logging, CORS</small>
+                                </div>
+                            </div>
+                            <div class="lifecycle-arrow">↓</div>
+                            <div class="lifecycle-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <strong>Route Handler</strong>
+                                    <small>Process Request</small>
+                                </div>
+                            </div>
+                            <div class="lifecycle-arrow">↓</div>
+                            <div class="lifecycle-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <strong>Database Query</strong>
+                                    <small>Fetch User Data</small>
+                                </div>
+                            </div>
+                            <div class="lifecycle-arrow">↓</div>
+                            <div class="lifecycle-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <strong>Response</strong>
+                                    <small>200 OK + JSON Data</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+                        <pre><code>// Express.js API Example
+app.get('/api/users/:id', async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.json({ success: true, data: user });
+    } catch (error) {
+        res.status(500).json({ 
+            success: false, 
+            error: error.message 
+        });
+    }
+});</code></pre>
+                    </div>
+                </div>
+
+                <!-- JWT Authentication Flow -->
+                <div class="card glass-card">
+                    <h3>JWT Authentication Flow</h3>
+                    <div class="diagram-container">
+                        <div class="jwt-flow">
+                            <div class="jwt-step">
+                                <div class="jwt-box user">👤 User</div>
+                                <div class="jwt-action">Login (credentials)</div>
+                                <div class="jwt-arrow">→</div>
+                            </div>
+                            <div class="jwt-step">
+                                <div class="jwt-box server">🖥️ Server</div>
+                                <div class="jwt-action">Verify & Generate JWT</div>
+                                <div class="jwt-arrow">←</div>
+                            </div>
+                            <div class="jwt-step">
+                                <div class="jwt-box user">👤 User</div>
+                                <div class="jwt-action">Store Token</div>
+                                <div class="jwt-arrow">→</div>
+                            </div>
+                            <div class="jwt-step">
+                                <div class="jwt-box server">🖥️ Server</div>
+                                <div class="jwt-action">Validate Token</div>
+                                <div class="jwt-arrow">←</div>
+                            </div>
+                            <div class="jwt-step">
+                                <div class="jwt-box user">👤 User</div>
+                                <div class="jwt-action">Access Protected Resource</div>
+                            </div>
+                        </div>
+                        <div class="jwt-token-structure">
+                            <h4>JWT Token Structure</h4>
+                            <div class="token-parts">
+                                <div class="token-part header">
+                                    <strong>Header</strong>
+                                    <small>Algorithm & Type</small>
+                                </div>
+                                <div class="token-dot">.</div>
+                                <div class="token-part payload">
+                                    <strong>Payload</strong>
+                                    <small>User Data & Claims</small>
+                                </div>
+                                <div class="token-dot">.</div>
+                                <div class="token-part signature">
+                                    <strong>Signature</strong>
+                                    <small>Verification Hash</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Relationships -->
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Database Relationships</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="db-relationships">
+                            <div class="relationship-type">
+                                <h4>One-to-One (1:1)</h4>
+                                <div class="relationship-diagram">
+                                    <div class="db-table">
+                                        <strong>User</strong>
+                                        <small>id, name</small>
+                                    </div>
+                                    <div class="relation-line">━━━</div>
+                                    <div class="db-table">
+                                        <strong>Profile</strong>
+                                        <small>id, user_id, bio</small>
+                                    </div>
+                                </div>
+                                <p>One user has one profile</p>
+                            </div>
+
+                            <div class="relationship-type">
+                                <h4>One-to-Many (1:N)</h4>
+                                <div class="relationship-diagram">
+                                    <div class="db-table">
+                                        <strong>Author</strong>
+                                        <small>id, name</small>
+                                    </div>
+                                    <div class="relation-line">━━━┳━━━</div>
+                                    <div class="db-table">
+                                        <strong>Posts</strong>
+                                        <small>id, author_id, title</small>
+                                    </div>
+                                </div>
+                                <p>One author has many posts</p>
+                            </div>
+
+                            <div class="relationship-type">
+                                <h4>Many-to-Many (N:M)</h4>
+                                <div class="relationship-diagram">
+                                    <div class="db-table">
+                                        <strong>Students</strong>
+                                        <small>id, name</small>
+                                    </div>
+                                    <div class="relation-line">━┳━</div>
+                                    <div class="db-table junction">
+                                        <strong>Enrollments</strong>
+                                        <small>student_id, course_id</small>
+                                    </div>
+                                    <div class="relation-line">━┳━</div>
+                                    <div class="db-table">
+                                        <strong>Courses</strong>
+                                        <small>id, name</small>
+                                    </div>
+                                </div>
+                                <p>Students enroll in many courses, courses have many students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caching System -->
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Caching Strategies</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="caching-strategies">
+                            <div class="cache-strategy">
+                                <h4>Cache-Aside (Lazy Loading)</h4>
+                                <ol>
+                                    <li>Application checks cache first</li>
+                                    <li>If miss, query database</li>
+                                    <li>Store result in cache</li>
+                                    <li>Return data to user</li>
+                                </ol>
+                            </div>
+
+                            <div class="cache-strategy">
+                                <h4>Write-Through Cache</h4>
+                                <ol>
+                                    <li>Write to cache first</li>
+                                    <li>Cache writes to database</li>
+                                    <li>Ensures data consistency</li>
+                                    <li>Higher latency on writes</li>
+                                </ol>
+                            </div>
+
+                            <div class="cache-strategy">
+                                <h4>Write-Behind Cache</h4>
+                                <ol>
+                                    <li>Write to cache immediately</li>
+                                    <li>Asynchronously write to DB</li>
+                                    <li>Better write performance</li>
+                                    <li>Risk of data loss</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="code-example">
+                            <pre><code>// Redis Caching Example
+async function getUser(userId) {
+    // Check cache first
+    const cached = await redis.get(`user:${userId}`);
+    if (cached) return JSON.parse(cached);
+    
+    // Cache miss - query database
+    const user = await db.users.findById(userId);
+    
+    // Store in cache for 1 hour
+    await redis.setex(`user:${userId}`, 3600, 
+        JSON.stringify(user));
+    
+    return user;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microservices Overview -->
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Microservices Architecture</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="microservices-diagram">
+                            <div class="microservice-layer">
+                                <div class="ms-box gateway">API Gateway</div>
+                            </div>
+                            <div class="ms-arrows">
+                                <div class="ms-arrow">↓</div>
+                                <div class="ms-arrow">↓</div>
+                                <div class="ms-arrow">↓</div>
+                            </div>
+                            <div class="microservice-layer">
+                                <div class="ms-box service">User Service</div>
+                                <div class="ms-box service">Order Service</div>
+                                <div class="ms-box service">Payment Service</div>
+                            </div>
+                            <div class="ms-arrows">
+                                <div class="ms-arrow">↓</div>
+                                <div class="ms-arrow">↓</div>
+                                <div class="ms-arrow">↓</div>
+                            </div>
+                            <div class="microservice-layer">
+                                <div class="ms-box db">User DB</div>
+                                <div class="ms-box db">Order DB</div>
+                                <div class="ms-box db">Payment DB</div>
+                            </div>
+                        </div>
+
+                        <h4>Benefits</h4>
+                        <ul>
+                            <li>Independent deployment and scaling</li>
+                            <li>Technology diversity</li>
+                            <li>Fault isolation</li>
+                            <li>Team autonomy</li>
+                        </ul>
+
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Distributed system complexity</li>
+                            <li>Network latency</li>
+                            <li>Data consistency</li>
+                            <li>Testing difficulty</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Stack Architecture Section -->
+        <section id="fullstack" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🌐 Full Stack Architecture</h2>
+                <p class="section-subtitle">Complete request-response lifecycle</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card full-width">
+                    <h3>Complete Request-Response Flow</h3>
+                    <div class="diagram-container">
+                        <div class="fullstack-flow">
+                            <div class="flow-row">
+                                <div class="flow-component user-component">
+                                    <div class="component-icon">👤</div>
+                                    <div class="component-label">User</div>
+                                    <div class="component-detail">Clicks button</div>
+                                </div>
+                                <div class="flow-connector">→</div>
+                                <div class="flow-component browser-component">
+                                    <div class="component-icon">🌐</div>
+                                    <div class="component-label">Browser</div>
+                                    <div class="component-detail">JavaScript event</div>
+                                </div>
+                                <div class="flow-connector">→</div>
+                                <div class="flow-component frontend-component">
+                                    <div class="component-icon">⚛️</div>
+                                    <div class="component-label">Frontend</div>
+                                    <div class="component-detail">React component</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-vertical-arrow">↓ HTTP Request (POST /api/data)</div>
+
+                            <div class="flow-row">
+                                <div class="flow-component api-component">
+                                    <div class="component-icon">🔌</div>
+                                    <div class="component-label">API Layer</div>
+                                    <div class="component-detail">REST endpoint</div>
+                                </div>
+                                <div class="flow-connector">→</div>
+                                <div class="flow-component server-component">
+                                    <div class="component-icon">🖥️</div>
+                                    <div class="component-label">Server</div>
+                                    <div class="component-detail">Node.js/Express</div>
+                                </div>
+                                <div class="flow-connector">→</div>
+                                <div class="flow-component db-component">
+                                    <div class="component-icon">💾</div>
+                                    <div class="component-label">Database</div>
+                                    <div class="component-detail">PostgreSQL query</div>
+                                </div>
+                            </div>
+
+                            <div class="flow-vertical-arrow">↑ Response (200 OK + JSON)</div>
+
+                            <div class="flow-row">
+                                <div class="flow-component user-component">
+                                    <div class="component-icon">✅</div>
+                                    <div class="component-label">User</div>
+                                    <div class="component-detail">Sees updated UI</div>
+                                </div>
+                                <div class="flow-connector">←</div>
+                                <div class="flow-component browser-component">
+                                    <div class="component-icon">🎨</div>
+                                    <div class="component-label">Browser</div>
+                                    <div class="component-detail">Renders changes</div>
+                                </div>
+                                <div class="flow-connector">←</div>
+                                <div class="flow-component frontend-component">
+                                    <div class="component-icon">🔄</div>
+                                    <div class="component-label">Frontend</div>
+                                    <div class="component-detail">Updates state</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Full Stack Code Example</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Frontend (React)</h4>
+                        <div class="code-example">
+                            <pre><code>// React Component
+function UserProfile() {
+    const [user, setUser] = useState(null);
+    
+    useEffect(() => {
+        fetch('/api/user/123')
+            .then(res => res.json())
+            .then(data => setUser(data));
+    }, []);
+    
+    return (
+        &lt;div&gt;
+            {user && &lt;h1&gt;{user.name}&lt;/h1&gt;}
+        &lt;/div&gt;
+    );
+}</code></pre>
+                        </div>
+
+                        <h4>Backend (Express.js)</h4>
+                        <div class="code-example">
+                            <pre><code>// Express API Route
+app.get('/api/user/:id', async (req, res) => {
+    const user = await db.query(
+        'SELECT * FROM users WHERE id = $1',
+        [req.params.id]
+    );
+    res.json(user.rows[0]);
+});</code></pre>
+                        </div>
+
+                        <h4>Database (SQL)</h4>
+                        <div class="code-example">
+                            <pre><code>-- PostgreSQL Table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    created_at TIMESTAMP DEFAULT NOW()
+);</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DevOps Section -->
+        <section id="devops" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🚀 DevOps & Deployment</h2>
+                <p class="section-subtitle">Continuous integration and delivery</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card">
+                    <h3>CI/CD Pipeline</h3>
+                    <div class="diagram-container">
+                        <div class="cicd-pipeline">
+                            <div class="pipeline-stage">
+                                <div class="stage-icon">📝</div>
+                                <div class="stage-name">Code</div>
+                                <small>Git commit</small>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-stage">
+                                <div class="stage-icon">🔨</div>
+                                <div class="stage-name">Build</div>
+                                <small>Compile & Bundle</small>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-stage">
+                                <div class="stage-icon">✅</div>
+                                <div class="stage-name">Test</div>
+                                <small>Unit & Integration</small>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-stage">
+                                <div class="stage-icon">🚀</div>
+                                <div class="stage-name">Deploy</div>
+                                <small>Production</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Docker Containerization</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Docker packages applications with all dependencies into containers.</p>
+                        <div class="code-example">
+                            <pre><code># Dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <pre><code># docker-compose.yml
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_PASSWORD=secret</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Cloud Platforms</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="cloud-platforms">
+                            <div class="platform-item">
+                                <h4>AWS (Amazon Web Services)</h4>
+                                <ul>
+                                    <li>EC2 - Virtual servers</li>
+                                    <li>S3 - Object storage</li>
+                                    <li>RDS - Managed databases</li>
+                                    <li>Lambda - Serverless functions</li>
+                                    <li>CloudFront - CDN</li>
+                                </ul>
+                            </div>
+
+                            <div class="platform-item">
+                                <h4>Google Cloud Platform</h4>
+                                <ul>
+                                    <li>Compute Engine - VMs</li>
+                                    <li>Cloud Storage - Object storage</li>
+                                    <li>Cloud SQL - Databases</li>
+                                    <li>Cloud Functions - Serverless</li>
+                                    <li>Kubernetes Engine - Container orchestration</li>
+                                </ul>
+                            </div>
+
+                            <div class="platform-item">
+                                <h4>Microsoft Azure</h4>
+                                <ul>
+                                    <li>Virtual Machines</li>
+                                    <li>Blob Storage</li>
+                                    <li>Azure SQL</li>
+                                    <li>Azure Functions</li>
+                                    <li>AKS - Kubernetes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🔒 Security & Authentication</h2>
+                <p class="section-subtitle">Protecting applications and user data</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card">
+                    <h3>Common Security Vulnerabilities</h3>
+                    <div class="security-list">
+                        <div class="security-item">
+                            <h4>🎭 XSS (Cross-Site Scripting)</h4>
+                            <p>Injecting malicious scripts into web pages</p>
+                            <strong>Prevention:</strong>
+                            <ul>
+                                <li>Sanitize user input</li>
+                                <li>Use Content Security Policy</li>
+                                <li>Escape HTML output</li>
+                            </ul>
+                        </div>
+
+                        <div class="security-item">
+                            <h4>💉 SQL Injection</h4>
+                            <p>Inserting malicious SQL queries</p>
+                            <strong>Prevention:</strong>
+                            <ul>
+                                <li>Use parameterized queries</li>
+                                <li>ORM/query builders</li>
+                                <li>Input validation</li>
+                            </ul>
+                        </div>
+
+                        <div class="security-item">
+                            <h4>🔓 CSRF (Cross-Site Request Forgery)</h4>
+                            <p>Unauthorized commands from authenticated users</p>
+                            <strong>Prevention:</strong>
+                            <ul>
+                                <li>CSRF tokens</li>
+                                <li>SameSite cookies</li>
+                                <li>Double submit cookies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>OAuth 2.0 Flow</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="oauth-flow">
+                            <div class="oauth-step">
+                                <strong>1. Authorization Request</strong>
+                                <p>User clicks "Login with Google"</p>
+                            </div>
+                            <div class="oauth-arrow">↓</div>
+                            <div class="oauth-step">
+                                <strong>2. User Authentication</strong>
+                                <p>User logs in to Google</p>
+                            </div>
+                            <div class="oauth-arrow">↓</div>
+                            <div class="oauth-step">
+                                <strong>3. Authorization Grant</strong>
+                                <p>User approves permissions</p>
+                            </div>
+                            <div class="oauth-arrow">↓</div>
+                            <div class="oauth-step">
+                                <strong>4. Authorization Code</strong>
+                                <p>Redirect with code parameter</p>
+                            </div>
+                            <div class="oauth-arrow">↓</div>
+                            <div class="oauth-step">
+                                <strong>5. Access Token</strong>
+                                <p>Exchange code for token</p>
+                            </div>
+                            <div class="oauth-arrow">↓</div>
+                            <div class="oauth-step">
+                                <strong>6. Access Protected Resource</strong>
+                                <p>Use token to access API</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>HTTPS & SSL/TLS</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>How HTTPS Works</h4>
+                        <ol>
+                            <li>Client requests secure connection</li>
+                            <li>Server sends SSL certificate</li>
+                            <li>Client validates certificate</li>
+                            <li>Client and server exchange keys</li>
+                            <li>Encrypted communication established</li>
+                        </ol>
+
+                        <h4>Benefits</h4>
+                        <ul>
+                            <li>Data encryption in transit</li>
+                            <li>Server authentication</li>
+                            <li>Data integrity verification</li>
+                            <li>SEO ranking boost</li>
+                            <li>User trust</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Section -->
+        <section id="performance" class="section">
+            <div class="section-header">
+                <h2 class="section-title">⚡ Performance Optimization</h2>
+                <p class="section-subtitle">Making applications faster and more efficient</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card">
+                    <h3>Frontend Performance</h3>
+                    <ul class="optimization-list">
+                        <li>
+                            <strong>Code Splitting:</strong>
+                            <p>Load only necessary code for each route</p>
+                        </li>
+                        <li>
+                            <strong>Lazy Loading:</strong>
+                            <p>Defer loading of non-critical resources</p>
+                        </li>
+                        <li>
+                            <strong>Image Optimization:</strong>
+                            <p>Use WebP, responsive images, lazy loading</p>
+                        </li>
+                        <li>
+                            <strong>Minification:</strong>
+                            <p>Compress CSS, JavaScript, and HTML</p>
+                        </li>
+                        <li>
+                            <strong>Tree Shaking:</strong>
+                            <p>Remove unused code from bundles</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card glass-card">
+                    <h3>Backend Performance</h3>
+                    <ul class="optimization-list">
+                        <li>
+                            <strong>Database Indexing:</strong>
+                            <p>Speed up query performance</p>
+                        </li>
+                        <li>
+                            <strong>Query Optimization:</strong>
+                            <p>Efficient SQL queries, avoid N+1 problems</p>
+                        </li>
+                        <li>
+                            <strong>Caching:</strong>
+                            <p>Redis, Memcached for frequent data</p>
+                        </li>
+                        <li>
+                            <strong>Load Balancing:</strong>
+                            <p>Distribute traffic across servers</p>
+                        </li>
+                        <li>
+                            <strong>CDN Usage:</strong>
+                            <p>Serve static assets from edge locations</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Web Vitals</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="vitals-grid">
+                            <div class="vital-item">
+                                <h4>LCP (Largest Contentful Paint)</h4>
+                                <p>Loading performance - measures when the largest content element becomes visible</p>
+                                <strong>Target:</strong> < 2.5 seconds
+                            </div>
+
+                            <div class="vital-item">
+                                <h4>FID (First Input Delay)</h4>
+                                <p>Interactivity - time from user interaction to browser response</p>
+                                <strong>Target:</strong> < 100 milliseconds
+                            </div>
+
+                            <div class="vital-item">
+                                <h4>CLS (Cumulative Layout Shift)</h4>
+                                <p>Visual stability - measures unexpected layout shifts</p>
+                                <strong>Target:</strong> < 0.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Topics Section -->
+        <section id="advanced" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Advanced Topics</h2>
+                <p class="section-subtitle">Cutting-edge web development concepts</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>WebAssembly (Wasm)</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Binary instruction format for web - enables near-native performance</p>
+                        <h4>Use Cases:</h4>
+                        <ul>
+                            <li>High-performance computing in browser</li>
+                            <li>Games and graphics</li>
+                            <li>Video/audio processing</li>
+                            <li>Porting desktop apps to web</li>
+                        </ul>
+                        <h4>Languages that compile to Wasm:</h4>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>Rust</li>
+                            <li>Go</li>
+                            <li>AssemblyScript (TypeScript-like)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Progressive Web Apps (PWA)</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Web apps that provide native-like experience</p>
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Offline functionality (Service Workers)</li>
+                            <li>Installable on device</li>
+                            <li>Push notifications</li>
+                            <li>App-like navigation</li>
+                            <li>Background sync</li>
+                        </ul>
+
+                        <div class="code-example">
+                            <pre><code>// service-worker.js
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open('v1').then((cache) => {
+            return cache.addAll([
+                '/',
+                '/styles.css',
+                '/app.js'
+            ]);
+        })
+    );
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>GraphQL</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Query language for APIs - request exactly what you need</p>
+                        
+                        <h4>Advantages over REST:</h4>
+                        <ul>
+                            <li>Single endpoint for all data</li>
+                            <li>No over-fetching or under-fetching</li>
+                            <li>Strong typing</li>
+                            <li>Introspection and documentation</li>
+                        </ul>
+
+                        <div class="code-example">
+                            <pre><code>// GraphQL Query
+query GetUser {
+    user(id: "123") {
+        name
+        email
+        posts {
+            title
+            content
+        }
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Server-Side Rendering (SSR) & Static Site Generation (SSG)</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="rendering-comparison">
+                            <div class="rendering-type">
+                                <h4>CSR (Client-Side Rendering)</h4>
+                                <p>JavaScript renders content in browser</p>
+                                <strong>Pros:</strong> Rich interactivity, lower server load<br>
+                                <strong>Cons:</strong> Slower initial load, SEO challenges
+                            </div>
+
+                            <div class="rendering-type">
+                                <h4>SSR (Server-Side Rendering)</h4>
+                                <p>Server renders HTML for each request</p>
+                                <strong>Pros:</strong> Better SEO, faster initial paint<br>
+                                <strong>Cons:</strong> Higher server load, complexity
+                            </div>
+
+                            <div class="rendering-type">
+                                <h4>SSG (Static Site Generation)</h4>
+                                <p>Pre-render pages at build time</p>
+                                <strong>Pros:</strong> Fastest performance, great SEO<br>
+                                <strong>Cons:</strong> Not suitable for dynamic content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Structure Section -->
+        <section id="project-structure" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📁 Real-World Project Structure</h2>
+                <p class="section-subtitle">Professional code organization</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card full-width">
+                    <h3>Full Stack Project Structure</h3>
+                    <div class="file-tree">
+                        <div class="tree-item folder">
+                            <span class="tree-icon">📁</span> project-root/
+                            <div class="tree-children">
+                                <div class="tree-item folder">
+                                    <span class="tree-icon">📁</span> client/
+                                    <div class="tree-children">
+                                        <div class="tree-item folder">
+                                            <span class="tree-icon">📁</span> src/
+                                            <div class="tree-children">
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> components/
+                                                    <div class="tree-children">
+                                                        <div class="tree-item file"><span class="tree-icon">📄</span> Header.jsx</div>
+                                                        <div class="tree-item file"><span class="tree-icon">📄</span> Footer.jsx</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> pages/
+                                                    <div class="tree-children">
+                                                        <div class="tree-item file"><span class="tree-icon">📄</span> Home.jsx</div>
+                                                        <div class="tree-item file"><span class="tree-icon">📄</span> Dashboard.jsx</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> hooks/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> services/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> utils/</div>
+                                                <div class="tree-item file"><span class="tree-icon">📄</span> App.jsx</div>
+                                                <div class="tree-item file"><span class="tree-icon">📄</span> main.jsx</div>
+                                            </div>
+                                        </div>
+                                        <div class="tree-item file"><span class="tree-icon">📄</span> package.json</div>
+                                        <div class="tree-item file"><span class="tree-icon">📄</span> vite.config.js</div>
+                                    </div>
+                                </div>
+                                <div class="tree-item folder">
+                                    <span class="tree-icon">📁</span> server/
+                                    <div class="tree-children">
+                                        <div class="tree-item folder">
+                                            <span class="tree-icon">📁</span> src/
+                                            <div class="tree-children">
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> routes/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> controllers/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> models/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> middleware/</div>
+                                                <div class="tree-item folder">
+                                                    <span class="tree-icon">📁</span> config/</div>
+                                                <div class="tree-item file"><span class="tree-icon">📄</span> server.js</div>
+                                            </div>
+                                        </div>
+                                        <div class="tree-item file"><span class="tree-icon">📄</span> package.json</div>
+                                    </div>
+                                </div>
+                                <div class="tree-item file"><span class="tree-icon">📄</span> .gitignore</div>
+                                <div class="tree-item file"><span class="tree-icon">📄</span> README.md</div>
+                                <div class="tree-item file"><span class="tree-icon">📄</span> docker-compose.yml</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interview Preparation Section -->
+        <section id="interview" class="section">
+            <div class="section-header">
+                <h2 class="section-title">💼 Interview Preparation</h2>
+                <p class="section-subtitle">Common questions and concepts</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>JavaScript Concepts</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="interview-topic">
+                            <h4>Closures</h4>
+                            <p>Function that has access to variables in its outer scope</p>
+                            <div class="code-example">
+                                <pre><code>function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        return count;
+    }
+}
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="interview-topic">
+                            <h4>Promises vs Async/Await</h4>
+                            <p>Both handle asynchronous operations</p>
+                            <div class="code-example">
+                                <pre><code>// Promise
+fetch('/api/data')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+
+// Async/Await
+async function getData() {
+    try {
+        const res = await fetch('/api/data');
+        const data = await res.json();
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="interview-topic">
+                            <h4>Event Delegation</h4>
+                            <p>Handle events at parent level instead of individual elements</p>
+                            <div class="code-example">
+                                <pre><code>document.getElementById('list')
+    .addEventListener('click', (e) => {
+        if (e.target.tagName === 'LI') {
+            console.log('Item clicked:', e.target.textContent);
+        }
+    });</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>System Design Questions</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Design a URL Shortener</h4>
+                        <ul>
+                            <li>Requirements: Generate short URLs, redirect to original</li>
+                            <li>Database: Store mapping (short → original)</li>
+                            <li>Algorithm: Base62 encoding of auto-increment ID</li>
+                            <li>Caching: Redis for frequent URLs</li>
+                            <li>Scale: Sharding, load balancing</li>
+                        </ul>
+
+                        <h4>Design a Real-time Chat</h4>
+                        <ul>
+                            <li>WebSocket for bi-directional communication</li>
+                            <li>Message queue (RabbitMQ/Kafka)</li>
+                            <li>Database for message persistence</li>
+                            <li>Presence system (Redis)</li>
+                            <li>Media storage (S3)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card glass-card expandable">
+                    <div class="card-header" onclick="toggleExpand(this)">
+                        <h3>Best Practices</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="best-practices-list">
+                            <li><strong>Code Quality:</strong> Clean, readable, maintainable code</li>
+                            <li><strong>Testing:</strong> Unit, integration, and E2E tests</li>
+                            <li><strong>Version Control:</strong> Meaningful commits, branching strategy</li>
+                            <li><strong>Documentation:</strong> README, code comments, API docs</li>
+                            <li><strong>Security:</strong> Input validation, authentication, HTTPS</li>
+                            <li><strong>Performance:</strong> Optimize images, lazy loading, caching</li>
+                            <li><strong>Accessibility:</strong> Semantic HTML, ARIA labels, keyboard navigation</li>
+                            <li><strong>Responsive Design:</strong> Mobile-first approach</li>
+                            <li><strong>Error Handling:</strong> Graceful degradation, user feedback</li>
+                            <li><strong>Monitoring:</strong> Logging, analytics, error tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="section-header">
+                <h2 class="section-title">❓ Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions answered</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="card glass-card faq-card" onclick="toggleExpand(this)">
+                    <div class="faq-question">
+                        <h3>What should I learn first: Frontend or Backend?</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Start with frontend (HTML, CSS, JavaScript) as it provides immediate visual feedback and is essential for all web development. Once comfortable, move to backend to understand the full stack.</p>
+                    </div>
+                </div>
+
+                <div class="card glass-card faq-card" onclick="toggleExpand(this)">
+                    <div class="faq-question">
+                        <h3>Do I need to learn multiple frameworks?</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Master one framework deeply first (React is most popular). Once you understand core concepts, learning others becomes easier. The principles are often transferable.</p>
+                    </div>
+                </div>
+
+                <div class="card glass-card faq-card" onclick="toggleExpand(this)">
+                    <div class="faq-question">
+                        <h3>How important is TypeScript?</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Very important for large applications. TypeScript adds static typing, reducing bugs and improving code quality. Most modern projects use it. Learn JavaScript first, then TypeScript.</p>
+                    </div>
+                </div>
+
+                <div class="card glass-card faq-card" onclick="toggleExpand(this)">
+                    <div class="faq-question">
+                        <h3>What's the difference between SQL and NoSQL?</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SQL databases (PostgreSQL, MySQL) use structured tables with relationships. NoSQL (MongoDB, Redis) is flexible, schema-less, better for unstructured data. Learn both - they serve different use cases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Advanced Web Dev Documentation</h3>
+                    <p>Your comprehensive guide to modern web development</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#frontend">Frontend</a></li>
+                        <li><a href="#backend">Backend</a></li>
+                        <li><a href="#fullstack">Full Stack</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#interview">Interview Prep</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#advanced">Advanced Topics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <p>Built with ❤️ using HTML, CSS, JavaScript</p>
+                    <p>© 2024 Web Dev Docs Portal</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
